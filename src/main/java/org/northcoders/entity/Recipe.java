@@ -14,7 +14,7 @@ public class Recipe {
     @GeneratedValue
     private long id;
 
-    @OneToMany(mappedBy = "recipe")
+    @OneToMany(mappedBy = "associatedRecipe")
     private Set<Comment> comments;
 
     @OneToMany(mappedBy = "recipe")
@@ -49,6 +49,8 @@ public class Recipe {
 
     @ManyToOne(fetch = LAZY)
     private User creator;
+
+
 
     private LocalDate dateCreated;
     private LocalDate lastModified;
