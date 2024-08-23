@@ -3,16 +3,22 @@ package org.northcoders.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Set;
 
 
 @Entity
 public class Category {
     @Id
     @GeneratedValue
-    int id;
+    private long id;
 
     @NotNull
-    String name;
+    private String name;
+
+    @ManyToMany(mappedBy = "categories")
+    Set<Recipe> recipes;
 
 }
