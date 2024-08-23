@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import org.jetbrains.annotations.NotNull;
 
+
 import java.time.LocalDate;
 
 @Entity
