@@ -1,8 +1,6 @@
 package org.northcoders;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.northcoders.entity.*;
 import org.northcoders.entity.Tag;
@@ -35,7 +33,7 @@ public class Database {
                     configuration.addAnnotatedClass(Ingredient.class);
                     configuration.addAnnotatedClass(Rating.class);
                     configuration.addAnnotatedClass(Recipe.class);
-                    configuration.addAnnotatedClass(User.class);
+                    configuration.addAnnotatedClass(RecipeUser.class);
                 } catch (Exception e) {
 
                     System.err.println("Failed to add annotated class: " + e.getMessage());
