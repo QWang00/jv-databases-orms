@@ -24,6 +24,9 @@ public class User {
     Role role;
     LocalDate dateRegistered;
 
-    @OneToMany(mappedBy = "comment")
+    @OneToMany(mappedBy = "author")
     Set<Comment> comments;
+
+    @OneToMany(mappedBy = "rater")
+    Set<Rating> rating;
 }
