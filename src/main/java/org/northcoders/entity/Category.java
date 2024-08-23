@@ -1,17 +1,18 @@
 package org.northcoders.entity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import org.jetbrains.annotations.NotNull;
 
 
-import javax.annotation.processing.Generated;
-
+@Entity
 public class Category {
     @Id
     @GeneratedValue
     int id;
 
-
+    @NotNull
     String name;
 
 }
