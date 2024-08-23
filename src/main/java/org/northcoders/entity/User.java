@@ -14,22 +14,22 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue
-    int id;
+    private long id;
 
     @NotNull
-    String userName;
+    private String userName;
 
-    String email;
-    String password;
-    Role role;
-    LocalDate dateRegistered;
+    private String email;
+    private String password;
+    private Role role;
+    private LocalDate dateRegistered;
 
     @OneToMany(mappedBy = "author")
-    Set<Comment> comments;
+    private Set<Comment> comments;
 
     @OneToMany(mappedBy = "rater")
-    Set<Rating> rating;
+    private Set<Rating> ratings;
 
     @OneToMany(mappedBy = "creator")
-    Set<Recipe> recipe;
+    private Set<Recipe> recipes;
 }

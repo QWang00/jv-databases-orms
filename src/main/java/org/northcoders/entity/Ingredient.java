@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import org.jetbrains.annotations.NotNull;
-
 import java.util.Set;
 
 @Entity

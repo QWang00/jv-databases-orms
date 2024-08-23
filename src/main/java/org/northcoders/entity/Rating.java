@@ -12,16 +12,16 @@ import java.time.LocalDate;
 public class Rating {
     @Id
     @GeneratedValue
-    int id;
+    private long id;
 
     @NotNull
-    int value;
+    private int value;
 
-    LocalDate dateRated;
-
-    @ManyToOne(fetch = LAZY)
-    Recipe associatedRecipe;
+    private LocalDate dateRated;
 
     @ManyToOne(fetch = LAZY)
-    User rater;
+    private Recipe associatedRecipe;
+
+    @ManyToOne(fetch = LAZY)
+    private User rater;
 }

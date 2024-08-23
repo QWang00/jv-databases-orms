@@ -1,24 +1,21 @@
 package org.northcoders.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.ManyToAny;
-
 import java.time.LocalDate;
-
 import static jakarta.persistence.FetchType.LAZY;
 
 @Entity
 public class Comment {
     @Id
     @GeneratedValue
-    int id;
+    private long id;
 
-    String text;
-    LocalDate datePosted;
+    private String text;
+    private LocalDate datePosted;
 
     @ManyToOne(fetch=LAZY)
-    User author;
+    private User author;
 
     @ManyToOne(fetch = LAZY)
-    Recipe associatedRecipe;
+    private Recipe associatedRecipe;
 }

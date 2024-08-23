@@ -9,8 +9,8 @@ import org.jetbrains.annotations.NotNull;
 public class Tag {
     @Id
     @GeneratedValue
-    int id;
+    private long id;
 
     @NotNull
-    String name;
+    private String name;
 }
