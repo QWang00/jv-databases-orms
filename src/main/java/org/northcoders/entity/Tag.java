@@ -13,4 +13,27 @@ public class Tag {
 
     @NotNull
     private String name;
+
+    public Tag() {
+    }
+
+    public Tag(@NotNull String name) {
+        this.name = name;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public @NotNull String getName() {
+        return name;
+    }
+
+    public void setName(@NotNull String name) {
+        this.name = name;
+    }
 }

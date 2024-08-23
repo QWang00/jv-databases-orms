@@ -22,4 +22,14 @@ public class Rating {
 
     @ManyToOne(fetch = LAZY)
     private RecipeUser rater;
+
+    public Rating() {
+    }
+
+    public Rating(@NotNull int value, LocalDate dateRated, Recipe associatedRecipe, RecipeUser rater) {
+        this.value = value;
+        this.dateRated = dateRated;
+        this.associatedRecipe = associatedRecipe;
+        this.rater = rater;
+    }
 }

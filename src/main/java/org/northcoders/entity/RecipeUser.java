@@ -32,4 +32,18 @@ public class RecipeUser {
 
     @OneToMany(mappedBy = "creator")
     private Set<Recipe> recipes;
+
+    public RecipeUser() {
+    }
+
+    public RecipeUser(@NotNull String userName, String email, String password, Role role, LocalDate dateRegistered, Set<Comment> comments, Set<Rating> ratings, Set<Recipe> recipes) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+        this.dateRegistered = dateRegistered;
+        this.comments = comments;
+        this.ratings = ratings;
+        this.recipes = recipes;
+    }
 }

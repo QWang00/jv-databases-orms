@@ -21,4 +21,55 @@ public class Ingredient {
 
     int quantity;
     private String unitOfMeasurement;
+
+    public Ingredient() {
+    }
+
+    public Ingredient( @NotNull String name, Set<Recipe> recipes, int quantity, String unitOfMeasurement) {
+
+        this.name = name;
+        this.recipes = recipes;
+        this.quantity = quantity;
+        this.unitOfMeasurement = unitOfMeasurement;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public @NotNull String getName() {
+        return name;
+    }
+
+    public void setName(@NotNull String name) {
+        this.name = name;
+    }
+
+    public Set<Recipe> getRecipes() {
+        return recipes;
+    }
+
+    public void setRecipes(Set<Recipe> recipes) {
+        this.recipes = recipes;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getUnitOfMeasurement() {
+        return unitOfMeasurement;
+    }
+
+    public void setUnitOfMeasurement(String unitOfMeasurement) {
+        this.unitOfMeasurement = unitOfMeasurement;
+    }
 }
