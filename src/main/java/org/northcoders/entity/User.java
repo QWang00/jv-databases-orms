@@ -29,4 +29,7 @@ public class User {
 
     @OneToMany(mappedBy = "rater")
     Set<Rating> rating;
+
+    @OneToMany(mappedBy = "creator")
+    Set<Recipe> recipe;
 }
