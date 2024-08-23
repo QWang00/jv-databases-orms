@@ -52,4 +52,9 @@ public class Database {
         }
         return sessionFactory;
     }
+
+    static void seed(){
+        var sessionFactory = getSessionFactory();
+        // TODO
+    }
 }
