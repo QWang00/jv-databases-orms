@@ -3,7 +3,6 @@ package org.northcoders.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Set;
 
 import static jakarta.persistence.FetchType.LAZY;
@@ -17,7 +16,7 @@ public class Recipe {
     @OneToMany(mappedBy = "associatedRecipe")
     private Set<Comment> comments;
 
-    @OneToMany(mappedBy = "recipe")
+    @OneToMany(mappedBy = "associatedRecipe")
     private Set<Image> images;
 
     private String title;
@@ -28,7 +27,7 @@ public class Recipe {
     private int servings;
     private int difficultyLevel;
 
-    @OneToMany(mappedBy = "recipe")
+    @OneToMany(mappedBy = "associatedRecipe")
     private Set<Rating> rating;
 
     @ManyToMany
@@ -48,7 +47,7 @@ public class Recipe {
     private Set<Category> categories;
 
     @ManyToOne(fetch = LAZY)
-    private User creator;
+    private RecipeUser creator;
 
 
 

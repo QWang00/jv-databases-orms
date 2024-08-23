@@ -14,7 +14,7 @@ public class Comment {
     private LocalDate datePosted;
 
     @ManyToOne(fetch=LAZY)
-    private User author;
+    private RecipeUser author;
 
     @ManyToOne(fetch = LAZY)
     private Recipe associatedRecipe;

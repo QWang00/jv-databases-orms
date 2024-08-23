@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
-public class User {
+public class RecipeUser {
     @Id
     @GeneratedValue
     private long id;

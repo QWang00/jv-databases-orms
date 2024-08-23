@@ -1,12 +1,9 @@
 package org.northcoders.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import org.jetbrains.annotations.NotNull;
-import static jakarta.persistence.FetchType.LAZY;
 import java.time.LocalDate;
+import static jakarta.persistence.FetchType.LAZY;
 
 @Entity
 public class Rating {
@@ -14,6 +11,7 @@ public class Rating {
     @GeneratedValue
     private long id;
 
+    @Column(name = "rating_value")
     @NotNull
     private int value;
 
@@ -23,5 +21,5 @@ public class Rating {
     private Recipe associatedRecipe;
 
     @ManyToOne(fetch = LAZY)
-    private User rater;
+    private RecipeUser rater;
 }
